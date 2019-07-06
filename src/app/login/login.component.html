@@ -1,0 +1,21 @@
+<ion-content padding>
+  <div class="container">
+    <form [formGroup]="UserDetails">
+      <ion-item>
+        <ion-label color="primary" position="floating">
+          User Name:
+        </ion-label>
+        <ion-input type="text" formControlName="userName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" position="floating">
+          Password:
+        </ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <ion-button padding (click)="verifyUser()">Login</ion-button>
+
+      <!-- <button padding (click)="verifyUserTrial()">LoginTrial<button> -->
+    </form>
+  </div>
+</ion-content>

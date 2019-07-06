@@ -1,0 +1,7 @@
+{
+  "name": "onlinePay1",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

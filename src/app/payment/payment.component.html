@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align:center">
+      PAYMENT
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="container">
+      <form [formGroup]="PaymentDetails">
+    <ion-item>
+      <ion-label color="primary" position="floating">
+        Bill Number:
+      </ion-label>
+      <ion-input type="text" formControlName="billNo"></ion-input>
+    </ion-item>
+        <ion-item>
+            <ion-label color="primary" position="floating">
+              Bill Amount:
+            </ion-label>
+            <ion-input type="text" formControlName="billAmount"></ion-input>
+          </ion-item>
+          <ion-item>
+      <ion-label color="primary" position="floating">
+        Card Number:
+      </ion-label>
+      <ion-input type="text" formControlName="cardNo"></ion-input>
+    </ion-item>
+    
+      <ion-item>
+        <ion-label color="primary" position="floating">
+          Name on Card:
+        </ion-label>
+        <ion-input type="text" formControlName="nameOnCard"></ion-input>
+      </ion-item>
+      
+    <ion-row padding>
+      <ion-col>
+      <ion-label color="primary" >
+          Card Expiry:
+    </ion-label></ion-col>
+      <ion-col>  <ion-item>
+          <ion-label color="primary" >
+              Month
+        </ion-label>
+      <ion-select padding>
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="5">5</ion-select-option>
+        <ion-select-option value="6">6</ion-select-option>
+        <ion-select-option value="7">7</ion-select-option>
+        <ion-select-option value="8">8</ion-select-option>
+        <ion-select-option value="9">9</ion-select-option>
+        <ion-select-option value="10">10</ion-select-option>
+        <ion-select-option value="11">11</ion-select-option>
+        <ion-select-option value="12">12</ion-select-option>
+      </ion-select>
+      </ion-item>
+    </ion-col>
+      <ion-col>
+          <ion-item>
+              <ion-label color="primary" >
+                  Year
+            </ion-label>
+              <ion-select padding>
+                <ion-select-option value="1">2019</ion-select-option>
+                <ion-select-option value="2">2020</ion-select-option>
+                <ion-select-option value="3">2021</ion-select-option>
+                <ion-select-option value="4">2022</ion-select-option>
+                <ion-select-option value="5">2023</ion-select-option>
+                <ion-select-option value="6">2024</ion-select-option>
+                <ion-select-option value="7">2025</ion-select-option>
+                <ion-select-option value="8">2026</ion-select-option>
+                <ion-select-option value="9">2027</ion-select-option>
+                <ion-select-option value="10">2028</ion-select-option>
+                <ion-select-option value="11">2029</ion-select-option>
+                <ion-select-option value="12">2030</ion-select-option>
+              </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    
+    <ion-item>
+        <ion-label color="primary" position="floating">
+          CVV
+        </ion-label>
+        <ion-input type="password" formControlName="cvv"></ion-input>
+      </ion-item>
+
+      <ion-button padding (click)="completePayment()">Complete Payment</ion-button>
+      </form>
+  </div>
+</ion-content>
